@@ -1,5 +1,6 @@
+import './App.css';
+
 import {
-    BrowserRouter,
     Link,
     Route,
     Routes,
@@ -7,7 +8,7 @@ import {
 
 export default function App() {
     return (
-        <BrowserRouter>
+        <>
             <header>
                 <h1>Budget</h1>
                 <nav>
@@ -30,7 +31,13 @@ export default function App() {
                     <Route path="/accounts" element={<h2>Accounts</h2>} />
                     <Route path="/categories" element={<h2>Categories</h2>} />
                 </Routes>
+                <p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus gravida efficitur quam accumsan sodales. Maecenas felis erat, molestie et aliquet vel, volutpat vel mi. Ut efficitur metus urna. Cras viverra, nunc euismod ultricies tempus, purus felis eleifend risus, eget tristique nulla sem varius purus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec nec posuere nunc, in faucibus sem. Morbi in tortor eu sapien rhoncus volutpat et a nunc. Nulla porttitor justo sit amet porttitor lobortis.
+                </p>
+                <code>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus gravida efficitur quam accumsan sodales. Maecenas felis erat, molestie et aliquet vel, volutpat vel mi. Ut efficitur metus urna. Cras viverra, nunc euismod ultricies tempus, purus felis eleifend risus, eget tristique nulla sem varius purus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec nec posuere nunc, in faucibus sem. Morbi in tortor eu sapien rhoncus volutpat et a nunc. Nulla porttitor justo sit amet porttitor lobortis.
+                </code>
             </main>
-        </BrowserRouter>
+        </>
     );
 }
