@@ -1,5 +1,6 @@
 import './App.css';
 
+import { FormattedMessage } from 'react-intl';
 import {
     Link,
     Route,
@@ -10,32 +11,40 @@ export default function App() {
     return (
         <>
             <header>
-                <h1>Budget</h1>
+                <h1>
+                    <FormattedMessage id="budget" />
+                </h1>
                 <nav>
                     <ul>
                         <li>
-                            <Link to="/">Home</Link>
+                            <Link to="/">
+                                <FormattedMessage id="home" />
+                            </Link>
                         </li>
                         <li>
-                            <Link to="/accounts">Accounts</Link>
+                            <Link to="/accounts">
+                                <FormattedMessage id="accounts" />
+                            </Link>
                         </li>
                         <li>
-                            <Link to="/categories">Categories</Link>
+                            <Link to="/categories">
+                                <FormattedMessage id="categories" />
+                            </Link>
                         </li>
                     </ul>
                 </nav>
             </header>
             <main>
                 <Routes>
-                    <Route path="/" element={<h2>Home</h2>} />
-                    <Route path="/accounts" element={<h2>Accounts</h2>} />
-                    <Route path="/categories" element={<h2>Categories</h2>} />
+                    <Route path="/" element={<h2><FormattedMessage id="home" /></h2>} />
+                    <Route path="/accounts" element={<h2><FormattedMessage id="accounts" /></h2>} />
+                    <Route path="/categories" element={<h2><FormattedMessage id="categories" /></h2>} />
                 </Routes>
                 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus gravida efficitur quam accumsan sodales. Maecenas felis erat, molestie et aliquet vel, volutpat vel mi. Ut efficitur metus urna. Cras viverra, nunc euismod ultricies tempus, purus felis eleifend risus, eget tristique nulla sem varius purus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec nec posuere nunc, in faucibus sem. Morbi in tortor eu sapien rhoncus volutpat et a nunc. Nulla porttitor justo sit amet porttitor lobortis.
+                    <FormattedMessage id="lorem" />
                 </p>
                 <code>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus gravida efficitur quam accumsan sodales. Maecenas felis erat, molestie et aliquet vel, volutpat vel mi. Ut efficitur metus urna. Cras viverra, nunc euismod ultricies tempus, purus felis eleifend risus, eget tristique nulla sem varius purus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec nec posuere nunc, in faucibus sem. Morbi in tortor eu sapien rhoncus volutpat et a nunc. Nulla porttitor justo sit amet porttitor lobortis.
+                    <FormattedMessage id="lorem" />
                 </code>
             </main>
         </>
