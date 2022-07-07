@@ -1,5 +1,4 @@
 import './App.css';
-
 import { FormattedMessage } from 'react-intl';
 import {
     Link,
@@ -7,7 +6,13 @@ import {
     Routes,
 } from 'react-router-dom';
 
+import { useSelector, useDispatch } from 'react-redux';
+import { increment, incrementByAmount, decrement, selectCount } from './store/counterSlice'
+
 export default function App() {
+    const count = useSelector(selectCount);
+    const dispatch = useDispatch();
+
     return (
         <>
             <header>
@@ -40,6 +45,12 @@ export default function App() {
                     <Route path="/accounts" element={<h2><FormattedMessage id="accounts" /></h2>} />
                     <Route path="/categories" element={<h2><FormattedMessage id="categories" /></h2>} />
                 </Routes>
+                <p>
+                    <code>Count: {count}</code>
+                    <button onClick={() => dispatch(increment())}>Increment</button>
+                    <button onClick={() => dispatch(incrementByAmount(5))}>Increment+5</button>
+                    <button onClick={() => dispatch(decrement())}>Decrement</button>
+                </p>
                 <p>
                     <FormattedMessage id="lorem" />
                 </p>
